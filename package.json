@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.15",
+    "@iconscout/react-unicons": "^2.0.2",
+    "@iconscout/unicons": "^4.0.8",
     "@tanstack/react-table": "^8.9.3",
     "@tanstack/solid-table": "^8.9.3",
     "@tanstack/svelte-table": "^8.9.4",

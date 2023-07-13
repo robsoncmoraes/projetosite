@@ -1,0 +1,38 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: white;
+    flex-basis: 200px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.menu a {
+    color: rgb(94, 94, 94);
+    text-decoration: none;
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: rgb(36, 50, 240);
+}
+
+.icon {
+    display: flex;
+    margin-right: 15px;
+    color: rgb(209, 46, 98);
+    width: 60;
+}
+
+.link {
+    display: flex;
+
+}
+
+.itemMenu {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+}
