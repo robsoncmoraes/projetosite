@@ -6,9 +6,9 @@
     background-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100px;
-    width: 100%;
+    width: 1990px;
     border-bottom: 1px solid #a3a3a5;
-    position: fixed;
+    position: absolute;
 
 }
 
