@@ -16,7 +16,7 @@ export default function Menu() {
   return (
     <div className={styles.logo}>
       <div>
-        <Image src={logo} alt="logomarca" width={300} height={60} />
+        <Image src={logo} alt="logomarca" width={150} heigth={80} />
       </div>
 
       <ul className={styles.menu}>

@@ -7,7 +7,6 @@ export default function App({ Component, pageProps }) {
   return (
     <div className="container">
       <SideBar />
-      <Header />
       <Content>
         <Component {...pageProps} />
       </Content>

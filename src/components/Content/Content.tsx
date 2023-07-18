@@ -1,3 +1,4 @@
+import Header from "../Header/Header";
 import styles from "./Content.module.css";
 
 type ContentProps = {
@@ -6,8 +7,13 @@ type ContentProps = {
 
 export default function Content({ children }: ContentProps) {
   return (
-    <div className={styles.content}>
-      <div className="content">{children} CONTENT</div>
-    </div>
+    <>
+      <div>
+        <Header />
+      </div>
+      <div className={styles.content}>
+        <div className="content">{children}</div>
+      </div>
+    </>
   );
 }
