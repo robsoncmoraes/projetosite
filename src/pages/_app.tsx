@@ -1,11 +1,16 @@
+import Content from "@/components/Content/Content";
+import Header from "@/components/Header/Header";
 import SideBar from "@/components/SideBar/SideBar";
 import "@/styles/globals.css";
-import type { AppProps } from "next/app";
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }) {
   return (
-    <div>
+    <div className="container">
       <SideBar />
+      <Header />
+      <Content>
+        <Component {...pageProps} />
+      </Content>
     </div>
   );
 }

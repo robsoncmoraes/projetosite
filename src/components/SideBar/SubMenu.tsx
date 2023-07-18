@@ -16,11 +16,9 @@ export function Submenu({ children, title }: SubmenuProps) {
   }
 
   return (
-    <div className="submenu">
-      <div onClick={handleSubmenuClick} className="submenu-btn">
-        {title}
-      </div>
-      {isExpanded && <div className="submenu-content">{children}</div>}
+    <div>
+      <div onClick={handleSubmenuClick}>{title}</div>
+      {isExpanded && <div>{children}</div>}
     </div>
   );
 }
