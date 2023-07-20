@@ -15,7 +15,7 @@ export default function Transportadora() {
         </button>
       </div>
       <div className={styles.divBusca}>
-        <Link href="../../Logistica/TransportTableNone">
+        <Link href="../../Logistica/Transportadora/TransportadoraSearch">
           <UilSearch color="#a3a3a5" />
         </Link>
         <input

@@ -1,8 +1,7 @@
 import styles from "./TransportTableNone.module.css";
-import { UilPen } from "@iconscout/react-unicons";
-import { UilTrash } from "@iconscout/react-unicons";
 import Image from "next/image";
-import searchnone from "../../../public/images/searchnone.png";
+import searchnone from "../../../../public/images/searchnone.png";
+import { UilPlus } from "@iconscout/react-unicons";
 
 export default function TransportTableNone() {
   return (
@@ -16,11 +15,16 @@ export default function TransportTableNone() {
             <th className={styles.theadth}>Ações</th>
           </tr>
         </thead>
-
-        <div className={styles.searchnone} align="center">
-          <Image src={searchnone} alt="searchnone" width={400} heigth={300} />
-        </div>
       </table>
+      <div className={styles.searchnone} align="center">
+        <Image src={searchnone} alt="searchnone" width={500} heigth={400} />
+      </div>
+      <div className={styles.divBtn}>
+        <button className={styles.btn}>
+          <UilPlus />
+          Cadastrar Transportadora
+        </button>
+      </div>
     </div>
   );
 }

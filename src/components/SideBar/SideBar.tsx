@@ -35,7 +35,10 @@ export default function Menu() {
           <SubMenu title="Logística">
             <div className={styles.itemMenu}>
               <Item title="Expedição" path="/Logistica/expedicao" />
-              <Item title="Transportadoras" path="/Logistica/transportadora" />
+              <Item
+                title="Transportadoras"
+                path="/Logistica/Transportadora/Transportadora"
+              />
             </div>
           </SubMenu>
         </div>

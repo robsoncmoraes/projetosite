@@ -3,7 +3,6 @@
     margin-top: 40px;
     margin-left: 40px;
     margin-right: 10px;
-
 }
 
 .theadth {
@@ -17,13 +16,10 @@
     color: rgb(94, 94, 94);
     padding-bottom: 25px;
     padding-top: 25px;
-
 }
 
 .tbodytr:hover {
     background-color: #eee;
-
-
 }
 
 .tbodytd {
@@ -45,7 +41,6 @@
     margin: 5px;
     cursor: pointer;
     margin-right: 10px;
-
 }
 
 .buttonerase {
@@ -66,4 +61,26 @@
 
 .searchnone {
     padding-top: 40px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    margin-left: 1450px;
+    background: rgb(209, 46, 98);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    border-style: none;
+    height: 40px;
+    width: 250px;
+    text-shadow: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px
+}
+
+.divBtn {
+    width: 100%;
+    display: block;
+    align-items: center;
 }
