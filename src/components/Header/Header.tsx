@@ -7,7 +7,6 @@ import { UilLayerGroup } from "@iconscout/react-unicons";
 import { UilQuestionCircle } from "@iconscout/react-unicons";
 import { UilBell } from "@iconscout/react-unicons";
 import HelpContent from "./HelpContent";
-import Help from "./Help";
 
 export default function Header() {
   return (

@@ -1,0 +1,69 @@
+.table {
+    width: 100%;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 10px;
+
+}
+
+.theadth {
+    border-bottom: 1px solid #e8e8e9;
+    border-top: 1px solid #e8e8e9;
+    border-left: 1px solid #e8e8e9;
+    border-right: 1px solid #e8e8e9;
+    border-inline: 0px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: rgb(94, 94, 94);
+    padding-bottom: 25px;
+    padding-top: 25px;
+
+}
+
+.tbodytr:hover {
+    background-color: #eee;
+
+
+}
+
+.tbodytd {
+    border-bottom: 1px solid #e8e8e9;
+    color: rgb(94, 94, 94);
+    padding: 4px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.buttonedit {
+    background: white;
+    color: black;
+    border-style: 1px;
+    height: 40px;
+    width: 40px;
+    text-shadow: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+
+}
+
+.buttonerase {
+    background: white;
+    color: #ed2e6d;
+    border-style: 1px;
+    border-color: #ed2e6d;
+    height: 40px;
+    width: 40px;
+    text-shadow: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btnAlign {
+    border-bottom: 1px solid #e8e8e9;
+}
+
+.searchnone {
+    padding-top: 40px;
+}
