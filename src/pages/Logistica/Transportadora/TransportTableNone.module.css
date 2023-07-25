@@ -84,3 +84,8 @@
     display: block;
     align-items: center;
 }
+
+.tfoot {
+    display: flex;
+    align-content: center;
+}

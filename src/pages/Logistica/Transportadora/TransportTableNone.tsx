@@ -16,15 +16,19 @@ export default function TransportTableNone() {
           </tr>
         </thead>
       </table>
-      <div className={styles.searchnone} align="center">
-        <Image src={searchnone} alt="searchnone" width={500} heigth={400} />
-      </div>
-      <div className={styles.divBtn}>
-        <button className={styles.btn}>
-          <UilPlus />
-          Cadastrar Transportadora
-        </button>
-      </div>
+      <table>
+        <tr align="center">
+          <th>
+            <Image src={searchnone} alt="searchnone" width={500} heigth={400} />
+          </th>
+        </tr>
+        <tfoot className={styles.tfoot}>
+          <button className={styles.btn}>
+            <UilPlus />
+            Cadastrar Transportadora
+          </button>
+        </tfoot>
+      </table>
     </div>
   );
 }
