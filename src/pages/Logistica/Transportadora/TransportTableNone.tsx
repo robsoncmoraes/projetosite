@@ -16,13 +16,13 @@ export default function TransportTableNone() {
           </tr>
         </thead>
       </table>
-      <table>
+      <table className={styles.none}>
         <tr align="center">
           <th>
             <Image src={searchnone} alt="searchnone" width={500} heigth={400} />
           </th>
         </tr>
-        <tfoot className={styles.tfoot}>
+        <tfoot align="center">
           <button className={styles.btn}>
             <UilPlus />
             Cadastrar Transportadora

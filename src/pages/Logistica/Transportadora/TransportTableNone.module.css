@@ -65,8 +65,8 @@
 
 .btn {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-left: 1450px;
     background: rgb(209, 46, 98);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
@@ -80,12 +80,11 @@
 }
 
 .divBtn {
-    width: 100%;
-    display: block;
     align-items: center;
 }
 
-.tfoot {
+.none {
     display: flex;
-    align-content: center;
+    flex-direction: column;
+    justify-content: center;
 }

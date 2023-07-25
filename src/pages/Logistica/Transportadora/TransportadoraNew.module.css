@@ -1,0 +1,37 @@
+.tab {
+    display: flex;
+    align-items: center;
+    background: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(209, 46, 98);
+    border-style: line;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 40px;
+    width: 250px;
+    text-shadow: none;
+    cursor: pointer;
+    font-size: 18px
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    margin-left: 40px;
+
+}
+
+.link {
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: rgb(164, 163, 173);
+    padding-top: 15px;
+
+}
+
+.divLink {
+    margin-left: 40px;
+}
