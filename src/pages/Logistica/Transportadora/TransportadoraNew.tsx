@@ -14,7 +14,7 @@ export default function TransportadoraNew() {
         >
           Transportadoras
         </Link>
-        <UilAngleRight />
+        <UilAngleRight className={styles.UilAngleRight} size={30} />
         <Link
           className={styles.link}
           href="../../Logistica/Transportadora/Transportadora/TransportadoraNew"
@@ -22,6 +22,9 @@ export default function TransportadoraNew() {
           {" "}
           Cadastrar
         </Link>
+      </div>
+      <div>
+        <h1 className={styles.title}>Cadastrar transportadora</h1>
       </div>
       <Tab.Group>
         <Tab.List className={styles.list}>
