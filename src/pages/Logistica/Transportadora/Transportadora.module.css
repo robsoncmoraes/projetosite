@@ -30,6 +30,10 @@
     font-size: 18px
 }
 
+.a {
+    text-decoration: none;
+}
+
 .divBusca {
     display: flex;
     align-items: center;

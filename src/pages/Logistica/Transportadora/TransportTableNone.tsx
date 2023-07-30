@@ -23,10 +23,15 @@ export default function TransportTableNone() {
           </th>
         </tr>
         <tfoot align="center">
-          <button className={styles.btn}>
-            <UilPlus />
-            Cadastrar Transportadora
-          </button>
+          <a
+            className={styles.a}
+            href="../../Logistica/Transportadora/TransportadoraNew"
+          >
+            <button className={styles.btn}>
+              <UilPlus />
+              Cadastrar Transportadora
+            </button>
+          </a>
         </tfoot>
       </table>
     </div>

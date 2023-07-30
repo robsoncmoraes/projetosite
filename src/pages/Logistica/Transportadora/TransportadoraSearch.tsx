@@ -9,10 +9,15 @@ export default function TransportadoraSearch() {
     <>
       <div className={styles.top}>
         <h1 className={styles.title}>Transportadoras</h1>
-        <button className={styles.btn}>
-          <UilPlus />
-          Cadastrar Transportadora
-        </button>
+        <a
+          className={styles.a}
+          href="../../Logistica/Transportadora/TransportadoraNew"
+        >
+          <button className={styles.btn}>
+            <UilPlus />
+            Cadastrar Transportadora
+          </button>
+        </a>
       </div>
       <div className={styles.divBusca}>
         <Link href="../../Logistica/Transportadora/TransportadoraSearch">

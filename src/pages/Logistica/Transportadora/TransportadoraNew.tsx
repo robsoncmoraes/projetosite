@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./TransportadoraNew.module.css";
 import { NumberCircleOne, NumberCircleTwo } from "@phosphor-icons/react";
 import { UilAngleRight } from "@iconscout/react-unicons";
+import TableCadastroTransport from "./TableCadastroTransport";
 
 export default function TransportadoraNew() {
   return (
@@ -37,8 +38,10 @@ export default function TransportadoraNew() {
             Modalidade de envio
           </Tab>
         </Tab.List>
-        <Tab.Panels>
-          <Tab.Panel>Cadastrar trasportadora</Tab.Panel>
+        <Tab.Panels className={styles.alignTab}>
+          <Tab.Panel className={styles.alignPanel}>
+            <TableCadastroTransport />
+          </Tab.Panel>
           <Tab.Panel>Content 2</Tab.Panel>
         </Tab.Panels>
       </Tab.Group>
