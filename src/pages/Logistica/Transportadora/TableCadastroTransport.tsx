@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import styles from "./TableCadastroTransport.module.css";
 import Submitbutton from "./Submitbutton";
+import ModalCancel from "./ModalCancel";
 
 export default function TableCadastroTransport() {
   const {
@@ -169,7 +170,7 @@ export default function TableCadastroTransport() {
           </div>
         </fieldset>
         <div className={styles.btnAlign}>
-          <button className={styles.btn}>Cancelar</button>
+          <a href="./ModalCancel"><button className={styles.btn}>Cancelar</button></a>
           <Submitbutton
             id="ButtonId"
             text="Próximo"
