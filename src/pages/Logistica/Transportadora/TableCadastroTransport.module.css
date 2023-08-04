@@ -1,7 +1,6 @@
 .title {
     padding-top: 10px;
     border-bottom: 1px solid #eee;
-    color: rgb(94, 94, 94);
     margin-top: 20px;
     font-size: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -10,7 +9,7 @@
 .form {
     width: 100%;
     align-items: center;
-}
+    }
 
 .general {
     margin-left: 40px;
@@ -20,15 +19,19 @@
     width: 100%;
     border: 0;
     margin: 15px 0 15px 0;
-}
+    }
 
 .dadosGerais {
     border: 0;
     margin-left: 40px;
     width: 1800px;
     display: flex;
+    color: black;
+    font-weight: bold;
     flex-direction: column;
     justify-content: space-between;
+    border-left: 1px solid #e8e8e9;
+    border-right: 1px solid #e8e8e9;
 }
 
 .dadosTransp {
@@ -56,6 +59,8 @@
     margin-bottom: 20px;
     padding-right: 40px;
     margin-right: 40px;
+    padding-left: 10px;
+    font-weight: 400;
 
 }
 
@@ -66,6 +71,8 @@
     height: 32px;
     padding-right: 40px;
     margin-right: 40px;
+    padding-left: 10px;
+    font-weight: 400;
 }
 
 .nomeFantasia {
@@ -75,6 +82,8 @@
     height: 32px;
     padding-right: 40px;
     margin-right: 40px;
+    padding-left: 10px;
+    font-weight: 400;
 }
 
 .inscEstadual {
@@ -84,6 +93,8 @@
     height: 32px;
     padding-right: 40px;
     margin-right: 40px;
+    padding-left: 10px;
+    font-weight: 400;
 }
 
 .codExterno {
@@ -94,16 +105,31 @@
     padding-right: 40px;
     margin-right: 40px;
     margin-top: 20px;
+    padding-left: 10px;
+    font-weight: 400;
 }
 
 .codExternoAlign {
     margin-left: 40px;
     border: 0;
+    padding-left: 10px;
+    font-weight: 400;
+    border-left: 1px solid #e8e8e9;
+    border-right: 1px solid #e8e8e9;
+    font-weight: bold;
 }
 
 .adress {
     margin-left: 40px;
     border: 0;
+    padding-left: 10px;
+    font-weight: 400;
+    border-left: 1px solid #e8e8e9;
+    border-right: 1px solid #e8e8e9;
+    border-bottom: 1px solid #e8e8e9;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-weight: bold;
 }
 
 .cep {
@@ -115,6 +141,8 @@
     margin-right: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
+    padding-left: 10px;
+    font-weight: 400;
 }
 
 .rua {
@@ -125,6 +153,8 @@
     padding-right: 100px;
     margin-right: 40px;
     margin-bottom: 20px;
+    padding-left: 10px;
+    font-weight: 400;
 }
 
 .numero {
@@ -133,6 +163,8 @@
     border-radius: 6px;
     height: 32px;
     margin-right: 40px;
+    padding-left: 10px;
+    font-weight: 400;
 }
 
 .complemento {
@@ -142,6 +174,8 @@
     height: 32px;
     padding-right: 100px;
     margin-right: 40px;
+    padding-left: 10px;
+    font-weight: 400;
 }
 
 .bairro {
@@ -151,6 +185,8 @@
     height: 32px;
     padding-right: 100px;
     margin-right: 40px;
+    padding-left: 10px;
+    font-weight: 400;
 }
 
 .cidade {
@@ -160,11 +196,9 @@
     height: 32px;
     padding-right: 100px;
     margin-right: 40px;
+    padding-left: 10px;
+    font-weight: 400;
 }
-
-
-
-
 
 .alignstate {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -183,6 +217,7 @@
     flex-direction: row;
     justify-content: end;
 
+
 }
 
 .btn {
@@ -199,4 +234,5 @@
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-right: 20px;
+    font-weight: bold;
 }

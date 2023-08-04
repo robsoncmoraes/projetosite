@@ -1,21 +1,22 @@
 .tab {
     display: flex;
     align-items: center;
-    align-content: center;
     justify-content: center;
     background: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(209, 46, 98);
-    border-style: line;
     border-bottom: none;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     height: 40px;
-    width: 250px;
+    width: 300px;
     text-shadow: none;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
     padding-right: 10px;
+    font-weight: bold;
+    border-color: #e8e8e9;
+    margin-right: 20px;
 }
 
 .tab:active {
@@ -26,11 +27,15 @@
     border-bottom: none;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    border-color: #e8e8e9;
 }
 
-.tab:disabled {
-    color: brown;
+.tab:focus-visible{
+    outline: none;
 }
+
+
+
 
 
 .list {

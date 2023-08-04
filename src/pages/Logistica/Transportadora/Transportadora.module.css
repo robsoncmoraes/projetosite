@@ -17,17 +17,21 @@
 .btn {
     display: flex;
     align-items: center;
+    align-content: center;
+    justify-content: space-between;
     margin-left: 1450px;
     background: rgb(209, 46, 98);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     border-style: none;
     height: 40px;
-    width: 250px;
+    width: 260px;
     text-shadow: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 18px
+    font-size: 18px;
+    margin-top: 40px;
+    font-weight: bold;
 }
 
 .a {
@@ -37,6 +41,7 @@
 .divBusca {
     display: flex;
     align-items: center;
+    align-content: center;
     justify-content: space-between;
     margin-top: 20px;
     margin-left: 40px;
@@ -57,4 +62,3 @@
     width: 300px;
 }
 
-.divBusca img {}

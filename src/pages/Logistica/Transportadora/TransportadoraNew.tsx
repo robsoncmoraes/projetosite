@@ -4,6 +4,7 @@ import styles from "./TransportadoraNew.module.css";
 import { NumberCircleOne, NumberCircleTwo } from "@phosphor-icons/react";
 import { UilAngleRight } from "@iconscout/react-unicons";
 import TableCadastroTransport from "./TableCadastroTransport";
+import TransportadoraModForm from "./TransportadoraModForm";
 
 export default function TransportadoraNew() {
   return (
@@ -42,7 +43,7 @@ export default function TransportadoraNew() {
           <Tab.Panel className={styles.alignPanel}>
             <TableCadastroTransport />
           </Tab.Panel>
-          <Tab.Panel>Content 2</Tab.Panel>
+          <Tab.Panel><TransportadoraModForm/></Tab.Panel>
         </Tab.Panels>
       </Tab.Group>
     </>

@@ -3,6 +3,9 @@
     margin-top: 40px;
     margin-left: 40px;
     margin-right: 10px;
+    border-left: 1px solid #e8e8e9;
+    border-right: 1px solid #e8e8e9;
+    border-radius: 8px;
 }
 
 .theadth {
@@ -37,7 +40,7 @@
     height: 40px;
     width: 40px;
     text-shadow: none;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px;
     cursor: pointer;
     margin-right: 10px;
@@ -51,7 +54,7 @@
     height: 40px;
     width: 40px;
     text-shadow: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -65,18 +68,20 @@
 
 .btn {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    align-content: center;
     background: rgb(209, 46, 98);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     border-style: none;
     height: 40px;
-    width: 250px;
+    width: 260px;
     text-shadow: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 18px
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .divBtn {
