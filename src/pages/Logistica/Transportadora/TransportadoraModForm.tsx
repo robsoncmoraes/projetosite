@@ -3,8 +3,17 @@ import { UilTrash } from "@iconscout/react-unicons";
 import { UilExclamationCircle } from '@iconscout/react-unicons';
 import { UilPlus } from '@iconscout/react-unicons'
 import { UilCheck } from '@iconscout/react-unicons'
+import ButtonComponent from "./ButtonComponent";
+import { useState} from "react";
+import Modal from "./Modal";
 
 export default function TransportadoraModForm() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setShowModal(true);
+  };
+
   return (
     <>
     <h1 className={styles.title}>Cadastrar modalidade de envio</h1>
@@ -28,9 +37,8 @@ export default function TransportadoraModForm() {
             </td>
             
             <td className={styles.btnAlign}>
-               <button className={styles.buttonerase}>
-                <UilTrash />
-              </button>
+            <ButtonComponent onOpenModal={handleOpenModal} />
+      {showModal && <Modal onClose={() => setShowModal(false)} />}
             </td>
           </tr>
         </tbody>
