@@ -2,7 +2,7 @@ import styles from "./transportTable.module.css";
 import { UilPen } from "@iconscout/react-unicons";
 import { UilTrash } from "@iconscout/react-unicons";
 import Modal from "./Modal";
-import { useState} from "react";
+import { useState } from "react";
 import ButtonComponent from "./ButtonComponent";
 
 
