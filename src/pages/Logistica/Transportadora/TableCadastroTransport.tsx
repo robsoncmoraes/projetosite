@@ -1,184 +1,284 @@
-import { useForm } from "react-hook-form";
+import { Path, useForm, UseFormRegister } from "react-hook-form";
 import styles from "./TableCadastroTransport.module.css";
-import Submitbutton from "./Submitbutton";
+import { useRef, useState } from "react";
 import ModalCancel from "./ModalCancel";
 
+interface IFormValues {
+  "CNPJ da Transpotadora": string;
+  "Razão Social": string;
+  "Nome Fantasia (Opcional)": string;
+  "Inscrição Estadual": string;
+  "Código externo": string;
+  CEP: number;
+  Rua: string;
+  Numero: number;
+  Complemento: string;
+  Bairro: string;
+  Cidade: string;
+  estado: string;
+  cnpj: string;
+  razaosocial: string;
+  nomefantasia: string;
+  IndicadorInscEstadual: string;
+  inscestadual: string;
+  codexterno: string;
+}
+
+type InputProps = {
+  label: Path<IFormValues>;
+  register: UseFormRegister<IFormValues>;
+  required: boolean;
+  placeholder: string;
+  id: string;
+};
+
+const Input = ({ id, placeholder, label, register, required }: InputProps) => (
+  <>
+    <input
+      id={id}
+      className={styles.alignItens}
+      placeholder={placeholder}
+      {...register(label, { required })}
+    />
+  </>
+);
+
 export default function TableCadastroTransport() {
+  const [open, setOpen] = useState(true);
+
+  const cancelButtonRef = useRef(null);
+
+  const handleOpen = () => {
+    setOpen(!open);
+  };
+
   const {
     register,
-    handleSubmit,
     formState: { errors },
-  } = useForm();
+    handleSubmit,
+  } = useForm<IFormValues>();
+
+  const onSubmit = (data: IFormValues) => {
+    alert(JSON.stringify(data));
+  };
 
   return (
     <>
-      <form className={styles.form}>
+      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         <fieldset className={styles.dadosGerais}>
           <div className={styles.title}>Dados Gerais</div>
           <div className={styles.field}>
-            <input
-              className={styles.cnpj}
+            <Input
+              id="cnpj"
+              placeholder="CNPJ da Transportadora"
               label="CNPJ da Transpotadora"
-              text="CNPJ da Transportadora"
-              name="cnpj"
-              placeholder="CNPJ da transportadora"
               register={register}
-              errors={errors}
-            ></input>
+              required
+              {...register("cnpj", { required: true })}
+              aria-invalid={errors.cnpj ? "true" : "false"}
+            />
+            {errors.cnpj?.type === "required" && (
+              <p className={styles.error} role="alert">
+                CNPJ é obrigatório
+              </p>
+            )}
           </div>
           <div className={styles.dadosTransp}>
-            <input
-              className={styles.razaoSocial}
-              label="Razão Social"
-              text="Razão Social"
-              name="razaosocial"
+            <Input
+              id="razaosocial"
               placeholder="Razão Social"
+              label="Razão Social"
               register={register}
-              errors={errors}
-            ></input>
+              required
+              {...register("razaosocial", { required: true })}
+              aria-invalid={errors.razaosocial ? "true" : "false"}
+            />
+            {errors.razaosocial?.type === "required" && (
+              <p className={styles.error} role="alert">
+                Razão Social é obrigatório
+              </p>
+            )}
 
-            <input
-              className={styles.nomeFantasia}
-              title="Nome Fantasia (Opcional)"
+            <Input
+              id="nomefantasia"
               label="Nome Fantasia (Opcional)"
-              text="Nome Fantasia (Opcional)"
-              name="nomefantasia"
-              placeholder="Nome Fantasia (Opcional)"
               register={register}
-              errors={errors}
-            ></input>
+              required
+              placeholder="Nome Fantasia (Opcional)"
+              {...register("nomefantasia", { required: true })}
+              aria-invalid={errors.nomefantasia ? "true" : "false"}
+            />
+            {errors.nomefantasia?.type === "required" && (
+              <p className={styles.error} role="alert">
+                Nome Fantasia é obrigatório
+              </p>
+            )}
 
             <select
               className={styles.alignselect}
               id="IndicadorInscEstadual"
-              {...register("nomefantasia", {
+              {...register("IndicadorInscEstadual", {
                 validate: (value) => {
                   return value != "0;";
                 },
               })}
             >
-              <option
-                selected
-                disabled
-                value="Indicador Inscrição Estadual"
-              ></option>
+              <option selected value="Indicador Inscrição Estadual"></option>
               <option value="Contribuinte ICMS">1: Contribuinte ICMS</option>
               <option value="Opção 02">Opção 02</option>
               <option value="Opção 03">Opção 03</option>
             </select>
 
-            {errors?.nomefantasia?.type === "required" && (
-              <p className={styles.errormsg}>Nome Fantasia é obrigatório</p>
-            )}
-
-            <input
-              className={styles.inscEstadual}
+            <Input
+              id="inscestadual"
               label="Inscrição Estadual"
-              text="Inscrição Estadual"
+              register={register}
+              required
               placeholder="Inscrição Estadual"
-            ></input>
+              {...register("inscestadual", { required: true })}
+              aria-invalid={errors.inscestadual ? "true" : "false"}
+            />
+            {errors.inscestadual?.type === "required" && (
+              <p className={styles.error} role="alert">
+                Inscrição Estadual é obrigatório
+              </p>
+            )}
           </div>
         </fieldset>
         <fieldset className={styles.codExternoAlign}>
           <div className={styles.title}>Código externo da transportadora</div>
           <div>
-            <input
-              className={styles.codExterno}
+            <Input
+              id="codexterno"
               label="Código externo"
-              text="Código externo"
-              name="codigoexterno"
-              placeholder="Código externo"
               register={register}
-              errors={errors}
-            ></input>
+              required
+              placeholder="Código externo"
+              {...register("codexterno", { required: true })}
+              aria-invalid={errors.codexterno ? "true" : "false"}
+            />
+            {errors.codexterno?.type === "required" && (
+              <p className={styles.error} role="alert">
+                Cód. Externo é obrigatório
+              </p>
+            )}
           </div>
         </fieldset>
         <fieldset className={styles.adress}>
           <div className={styles.title}>Endereço</div>
           <div>
-            <input
-              className={styles.cep}
+            <Input
+              id="CEP"
               label="CEP"
-              text="CEP"
-              name="cep"
+              register={register}
+              required
               placeholder="CEP"
-              register={register}
-              errors={errors}
-            ></input>
+              {...register("CEP", { required: true })}
+              aria-invalid={errors.CEP ? "true" : "false"}
+            />
+            {errors.CEP?.type === "required" && (
+              <p className={styles.error} role="alert">
+                CEP é obrigatório
+              </p>
+            )}
           </div>
-          <div>
-            <input
-              className={styles.rua}
+          <div div className={styles.field}>
+            <Input
+              id="Rua"
               label="Rua"
-              text="Rua"
-              name="rua"
+              register={register}
+              required
               placeholder="Rua"
+              {...register("Rua", { required: true })}
+              aria-invalid={errors.Rua ? "true" : "false"}
+            />
+            {errors.Rua?.type === "required" && (
+              <p className={styles.error} role="alert">
+                Rua é obrigatório
+              </p>
+            )}
+            <Input
+              id="Numero"
+              label="Numero"
               register={register}
-              errors={errors}
-            ></input>
-            <input
-              className={styles.numero}
-              label="Número"
-              text="Número"
-              name="numero"
+              required
               placeholder="Número"
-              register={register}
-              errors={errors}
-            ></input>
-            <input
-              className={styles.complemento}
+              {...register("Numero", { required: true })}
+              aria-invalid={errors.Numero ? "true" : "false"}
+            />
+            {errors.Numero?.type === "required" && (
+              <p className={styles.error} role="alert">
+                Número é obrigatório
+              </p>
+            )}
+            <Input
+              id="Complemento"
               label="Complemento"
-              text="Complemento"
-              name="complemento"
+              register={register}
+              required
               placeholder="Complemento (Opcional)"
-              register={register}
-              errors={errors}
-            ></input>
+              {...register("Complemento", { required: true })}
+              aria-invalid={errors.Complemento ? "true" : "false"}
+            />
+            {errors.Complemento?.type === "required" && (
+              <p className={styles.error} role="alert">
+                Complemento é obrigatório
+              </p>
+            )}
           </div>
-          <div>
-            <input
-              className={styles.bairro}
+          <div div className={styles.field}>
+            <Input
+              id="Bairro"
               label="Bairro"
-              text="Bairro"
-              name="bairro"
+              register={register}
+              required
               placeholder="Bairro"
-              register={register}
-              errors={errors}
-            ></input>
-            <input
-              className={styles.cidade}
+              {...register("Bairro", { required: true })}
+              aria-invalid={errors.Bairro ? "true" : "false"}
+            />
+            {errors.Bairro?.type === "required" && (
+              <p className={styles.error} role="alert">
+                Bairro é obrigatório
+              </p>
+            )}
+            <Input
+              id="Cidade"
               label="Cidade"
-              text="Cidade"
-              name="cidade"
-              placeholder="Cidade"
               register={register}
-              errors={errors}
-            ></input>
+              required
+              placeholder="Cidade"
+              {...register("Cidade", { required: true })}
+              aria-invalid={errors.Cidade ? "true" : "false"}
+            />
+            {errors.Cidade?.type === "required" && (
+              <p className={styles.error} role="alert">
+                Cidade é obrigatório
+              </p>
+            )}
             <select
               className={styles.alignstate}
-              id="Estado"
+              id="estado"
               {...register("estado", { required: true })}
             >
-              <option selected disabled value="Estado"></option>
+              <option selected value="Estado"></option>
               <option>RJ</option>
               <option>SP</option>
               <option>MG</option>
             </select>
-            {errors?.estado?.type === "required" && (
-              <p className="error-message">Estado é obrigatório</p>
-            )}
           </div>
         </fieldset>
         <div className={styles.btnAlign}>
-          <a href="./ModalCancel"><button className={styles.btn}>Cancelar</button></a>
-          <Submitbutton
-            id="ButtonId"
-            text="Próximo"
-            onClick={(event) => {
-              event.preventDefault();
-              alert("teste");
-            }}
-          />
+          <div>
+            <button type="button" onClick={handleOpen} className={styles.btn}>
+              Cancelar
+            </button>
+          </div>
+          <div>
+            <button className={styles.btnnext} type="submit">
+              Próximo
+            </button>
+          </div>
+          <div className={styles.modal}>{open ? <ModalCancel /> : null}</div>
         </div>
       </form>
     </>

@@ -1,16 +1,17 @@
 import styles from "./transportTable.module.css";
 import { UilPen } from "@iconscout/react-unicons";
 import { UilTrash } from "@iconscout/react-unicons";
-import Modal from "./Modal";
-import { useState } from "react";
-import ButtonComponent from "./ButtonComponent";
+import { useRef, useState } from "react";
+import ModalExcluir from "./ModalExcluir";
 
+export default function TransportTable() {
+  const [open, setOpen] = useState(true);
 
-export default function transportTable() {
-  const [showModal, setShowModal] = useState(false);
-  const handleOpenModal = () => {setShowModal(true);};
+  const cancelButtonRef = useRef(null);
 
-  
+  const handleOpen = () => {
+    setOpen(!open);
+  };
   return (
     <div className={styles.general}>
       <table className={styles.table}>
@@ -34,8 +35,16 @@ export default function transportTable() {
               <button className={styles.buttonedit}>
                 <UilPen />
               </button>{" "}
-              <ButtonComponent onOpenModal={handleOpenModal}/>
-              {showModal && <Modal onClose={() => setShowModal(false)} />}
+              <button
+                type="button"
+                onClick={handleOpen}
+                className={styles.buttonerase}
+              >
+                <UilTrash />
+              </button>
+              <div className={styles.modal}>
+                {open ? <ModalExcluir /> : null}
+              </div>
             </td>
           </tr>
         </tbody>

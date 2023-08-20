@@ -11,6 +11,8 @@ import { UilBox } from "@iconscout/react-unicons";
 import { UilChatBubbleUser } from "@iconscout/react-unicons";
 import { UilBuilding } from "@iconscout/react-unicons";
 import { UilSetting } from "@iconscout/react-unicons";
+import { UilAngleRight } from '@iconscout/react-unicons';
+import { UilAngleDown } from '@iconscout/react-unicons'
 
 export default function Menu() {
   return (
@@ -21,13 +23,16 @@ export default function Menu() {
 
       <ul className={styles.menu}>
         <div className={styles.link}>
+        <div className={styles.link}>
           <UilShoppingCart className={styles.icon} />
           <SubMenu title="Vendas"></SubMenu>
+        </div>
+        <div className={styles.iconend}><UilAngleRight /></div>
         </div>
 
         <div className={styles.link}>
           <UilTagAlt className={styles.icon} />
-          <SubMenu title="Gerenciar Estoques e Preços"></SubMenu>
+          <SubMenu title="Gerenciar Estoques e Preços"></SubMenu><UilAngleRight className={styles.iconend}/>
         </div>
 
         <div className={styles.link}>
@@ -40,27 +45,27 @@ export default function Menu() {
                 path="/Logistica/Transportadora/Transportadora"
               />
             </div>
-          </SubMenu>
+          </SubMenu><UilAngleDown className={styles.iconend}/>
         </div>
 
         <div className={styles.link}>
           <UilBox className={styles.icon} />
-          <SubMenu title="Cadastro de Produtos"></SubMenu>
+          <SubMenu title="Cadastro de Produtos"></SubMenu><UilAngleRight className={styles.iconend}/>
         </div>
 
         <div className={styles.link}>
           <UilChatBubbleUser className={styles.icon} />
-          <SubMenu title="Clientes"></SubMenu>
+          <SubMenu title="Clientes"></SubMenu><UilAngleRight className={styles.iconend}/>
         </div>
 
         <div className={styles.link}>
           <UilBuilding className={styles.icon} />
-          <SubMenu title="Fornecedores"></SubMenu>
+          <SubMenu title="Fornecedores"></SubMenu><UilAngleRight className={styles.iconend}/>
         </div>
 
         <div className={styles.link}>
           <UilSetting className={styles.icon} />
-          <SubMenu title="Configurações"></SubMenu>
+          <SubMenu title="Configurações"></SubMenu><UilAngleRight className={styles.iconend}/>
         </div>
       </ul>
     </div>

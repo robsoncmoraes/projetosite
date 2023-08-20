@@ -21,7 +21,7 @@ export default function Transportadora() {
       </div>
       <div className={styles.divBusca}>
         <Link href="../../Logistica/Transportadora/TransportadoraSearch">
-          <UilSearch color="#a3a3a5" />
+          <UilSearch className={styles.iconSearch} color="#a3a3a5" />
         </Link>
         <input
           type="text"

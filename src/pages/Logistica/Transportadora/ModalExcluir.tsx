@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Modal from "react-modal";
 import styles from "./Modal.module.css";
 import { UilExclamationTriangle } from "@iconscout/react-unicons";
+import Modal from "react-modal";
 
 export default function ModalExcluir() {
   let [isOpen, setIsOpen] = useState(true);
@@ -9,10 +9,13 @@ export default function ModalExcluir() {
   function closeModal() {
     setIsOpen(false);
   }
-
   return (
     <>
-      <Modal isOpen={isOpen} onRequestClose={closeModal}>
+      <Modal
+        className={styles.myModal}
+        isOpen={isOpen}
+        onRequestClose={closeModal}
+      >
         <div
           className={styles.modal}
           open={isOpen}
@@ -20,19 +23,28 @@ export default function ModalExcluir() {
         >
           <div className={styles.content}>
             <div className={styles.title1}>
-              <UilExclamationTriangle size="40" className={styles.iconAlert2} />
-              Cancelar Cadastro
+              <UilExclamationTriangle size="40" className={styles.iconAlert} />
+              Excluir transportadora
             </div>
             <div className={styles.title2}>
-              Tem certeza que deseja cancelar o cadastro de Transportadora?
+              Tem certeza que deseja excluir esta Transportadora? Essa ação não
+              pode ser desfeita.
             </div>
             <div className={styles.align}>
               {" "}
-              <button className={styles.btnCancel} onClick={closeModal}>
+              <button
+                type="button"
+                className={styles.btnCancel}
+                onClick={() => setIsOpen(false)}
+              >
                 Cancelar
               </button>
-              <button className={styles.btnExcluir} onClick={closeModal}>
-                Sim, cancelar
+              <button
+                type="button"
+                className={styles.btnDelete}
+                onClick={closeModal}
+              >
+                Sim, excluir
               </button>
             </div>
           </div>

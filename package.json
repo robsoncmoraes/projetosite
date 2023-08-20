@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.15",
+    "@headlessui/react": "^1.7.17",
     "@iconscout/react-unicons": "^2.0.2",
     "@iconscout/unicons": "^4.0.8",
     "@phosphor-icons/react": "^2.0.10",
@@ -27,6 +27,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.45.2",
     "react-icons": "^4.10.1",
+    "react-modal": "^3.16.1",
     "typescript": "5.1.6"
   },
   "devDependencies": {

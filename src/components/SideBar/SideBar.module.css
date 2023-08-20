@@ -5,7 +5,7 @@
     background-color: white;
     flex-basis: 300px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     height: 100%;
     width: 300px;
     color: rgb(94, 94, 94);
@@ -30,7 +30,12 @@
 
 .link {
     display: flex;
+    justify-content: left;
+}
 
+.link2{
+    display: flex;
+    flex-direction: row;
 }
 
 .itemMenu {
@@ -45,4 +50,17 @@
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
+}
+
+.iconend {
+    display: flex;
+    justify-content: space-between;
+    height: 40;
+    color: rgb(209, 46, 98);
+    width: 60;
+}
+
+.submenu{
+    display: flex;
+    justify-content: left;
 }
